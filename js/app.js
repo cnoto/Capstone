@@ -16,6 +16,7 @@ function setBindings(){
         e.preventDefault();
         $('.assetResult').css({"display": "none"});
         // $('.assetResult').css({"display": "block"});
+        // this
     });
 
 	$("nav a").click(function(e){
