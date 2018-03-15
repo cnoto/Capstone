@@ -1,23 +1,28 @@
-
-/* Scroll to sections */
-// $(document).ready(function(){
-// 	setBindings();
-// });
-
 function setBindings(){
-// this is the listener for the assesments
+// this is the listener for the assessments
     $(".asset").click(function(e){
         e.preventDefault();
         $('.assetHome').css({"display": "none"});
-        $('.assetResult').css({"display": "block"});
+        $('.assetQuiz').css({"display": "block"});
     });
 
+    //this is the listener for when you click on the submit button
     $(".assetResultButton").click(function(e){
         e.preventDefault();
-        $('.assetResult').css({"display": "none"});
-        // $('.assetResult').css({"display": "block"});
-        // this
+        $('.assetQuiz').css({"display": "none"});
+        $('.assetResults').css({"display": "block"});
     });
+
+    $(".goHome").click(function(e){
+        $('.assetResults').css({"display": "none"});
+        $('.assetHome').css({"display": "block"});
+    })
+
+    // $(".assetResults").click(function(e){
+    //     e.preventDefault();
+    //     $('.assetQuiz').css({"display": "none"});
+    //     // $('.assetResult').css({"display": "block"});
+    // });
 
 	$("nav a").click(function(e){
 		e.preventDefault();
@@ -45,7 +50,7 @@ function setBindings(){
             });
 
     function displayResults() {
-        var items = JSON.parse(window.localStorage.getItem('assesments') || '[]');
+        var items = JSON.parse(window.localStorage.getItem('assessments') || '[]');
 
         items.forEach(function (item) {
             var className = item.toLowerCase();
@@ -53,19 +58,19 @@ function setBindings(){
         });
     }
 
-    $('.quiz--js label.container').on('click', 'input', function() {
-        var items = JSON.parse(window.localStorage.getItem('assesments') || '[]');
+    $('.quiz--js div.switch_box').on('click', 'input', function() {
+        var items = JSON.parse(window.localStorage.getItem('assessments') || '[]');
         var filteredItems;
 
         if ($(this).prop("checked") === true) {
-            var text = $(this).closest('label').data('text');
+            var text = $(this).closest('div').data('text');
             items.push(text);
-            localStorage.setItem('assesments', JSON.stringify(items));
+            localStorage.setItem('assessments', JSON.stringify(items));
         } else {
            filteredItems = items.filter(function (name) {
-               return name !== $(this).closest('label').data('text');
+               return name !== $(this).closest('div').data('text');
            }, this);
-           localStorage.setItem('assesments', JSON.stringify(filteredItems));
+           localStorage.setItem('assessments', JSON.stringify(filteredItems));
         }
     })
 

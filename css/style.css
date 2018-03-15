@@ -335,13 +335,13 @@ label {
 	text-align: center;
 }
 
-/* ASSESS PAGE */
+/* ASSESSMENT */
 #assessNav {
 	background-color: #42AAEB;
 	height: 100px;
 }
 
-.content-wrapper-assess {
+.assetQuiz {
 	width: 100%;
 	height: 70%;
 	background-color: #fff;
@@ -353,22 +353,21 @@ label {
 
 #blueHalf {
 	width: 100%;
-	height: 100%;
+	height: 50%;
 	background-color: #42AAEB;
-	margin-top: -100px;
 }
 
-.content-wrapper-assess h1 {
-	font-size: 60px;
+.assetQuiz h1 {
+	font-size: 50px;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: lighter;
 	color: #fff;
 	display: inline-block;
 	text-align: center;
-	padding-bottom: 10px;
+	padding-bottom: 20px;
 }
 
-.content-wrapper-assess h3 {
+.assetQuiz h3 {
 	font-size: 24px;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: lighter;
@@ -377,7 +376,7 @@ label {
 	margin-top: -15px;
 }
 
-.content-wrapper-assess h4 {
+.assetQuiz h4 {
 	font-size: 18px;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: lighter;
@@ -386,142 +385,504 @@ label {
 	padding-bottom: 10px;
 }
 
-.content-wrapper-assess .quiz {
-	width: 700px;
-	height: 400px;
-	background-color: #ffffff;
-	margin: 0 auto;
-	margin-bottom: 100px;
-	-webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
-    overflow: scroll;
-    margin-bottom: 20px;
-}
+/* QUIZBOX CSS */
+	.quiz {
+		width: 700px;
+		height: 350px;
+		background-color: #fff;
+		margin: 0 auto;
+		-webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
+        -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
+        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
+        overflow: hidden;
+        padding-bottom: 80px;
+	}
 
-.content-wrapper-assess .quiz label .container {
-	font-family: 'Open Sans', sans-serif;
-}
-
-.content-wrapper-assess .quiz #left-list {
-	background-color: #fff;
-	width: 350px;
-	height: 400px;
-	float: left;
-	padding-top: 20px;
-}
-
-.content-wrapper-assess .quiz #left-list li {
+.switch_box{
+	font-family: helvetica;
+	font-weight: lighter;
 	font-size: 20px;
-	font-family: 'Open Sans', sans-serif;
-	color: #888888;
-	list-style-type: none;
-	padding-bottom: 20px;
-	padding-left: 100px;
-	text-align: left;
+	margin-bottom: -20px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	max-width: 200px;
+	min-width: 200px;
+	height: 100px;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
 }
 
+/* Switch 1 Specific Styles Start */
 
-/* The container */
-.container {
-    display: inline-block;
-    margin: 0 auto;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    font-weight: lighter;
-    margin-bottom: -30px;
-    width: 180px;
-    position: relative;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
 
-/* Hide the browser's default checkbox */
-.container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-}
+input[type="checkbox"].switch_1{
+	font-size: 20px;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+	width: 3.5em;
+	height: 1.5em;
+	background: #ddd;
+	border-radius: 3em;
+	position: relative;
+	cursor: pointer;
+	outline: none;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+  }
+  
+  input[type="checkbox"].switch_1:checked{
+	background: #0ebeff;
+  }
+  
+  input[type="checkbox"].switch_1:after{
+	position: absolute;
+	content: "";
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 50%;
+	background: #fff;
+	-webkit-box-shadow: 0 0 .25em rgba(0,0,0,.3);
+	        box-shadow: 0 0 .25em rgba(0,0,0,.3);
+	-webkit-transform: scale(.7);
+	        transform: scale(.7);
+	left: 0;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+  }
+  
+  input[type="checkbox"].switch_1:checked:after{
+	left: calc(100% - 1.5em);
+  }
+	
+/* Switch 1 Specific Style End */
 
-/* Create a custom checkbox */
-.checkmark {
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-    float: left;
-}
+/* Switch 2 Specific Styles Start */
 
-/* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
-    background-color: #ccc;
-}
+input[type="checkbox"].switch_2{
+	font-size: 20px;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+	width: 3.5em;
+	height: 1.5em;
+	background: #ddd;
+	border-radius: 3em;
+	position: relative;
+	cursor: pointer;
+	outline: none;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	margin-left: -10px;
+  }
+  
+  input[type="checkbox"].switch_2:checked{
+	background: #0ebeff;
+  }
+  
+  input[type="checkbox"].switch_2:after{
+	position: absolute;
+	content: "";
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 50%;
+	background: #fff;
+	-webkit-box-shadow: 0 0 .25em rgba(0,0,0,.3);
+	        box-shadow: 0 0 .25em rgba(0,0,0,.3);
+	-webkit-transform: scale(.7);
+	        transform: scale(.7);
+	left: 0;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+  }
+  
+  input[type="checkbox"].switch_2:checked:after{
+	left: calc(100% - 1.5em);
+  }
+	
+/* Switch 2 Specific Style End */
 
-/* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
-    background-color: #2196F3;
-}
+/* Switch 3 Specific Styles Start */
 
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
+input[type="checkbox"].switch_3{
+	font-size: 20px;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+	width: 3.5em;
+	height: 1.5em;
+	background: #ddd;
+	border-radius: 3em;
+	position: relative;
+	cursor: pointer;
+	outline: none;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	margin-left: 10px;
+  }
+  
+  input[type="checkbox"].switch_3:checked{
+	background: #0ebeff;
+  }
+  
+  input[type="checkbox"].switch_3:after{
+	position: absolute;
+	content: "";
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 50%;
+	background: #fff;
+	-webkit-box-shadow: 0 0 .25em rgba(0,0,0,.3);
+	        box-shadow: 0 0 .25em rgba(0,0,0,.3);
+	-webkit-transform: scale(.7);
+	        transform: scale(.7);
+	left: 0;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+  }
+  
+  input[type="checkbox"].switch_3:checked:after{
+	left: calc(100% - 1.5em);
+  }
+	
+/* Switch 3 Specific Style End */
 
-/* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
-    display: block;
-}
+/* Switch 4 Specific Styles Start */
 
-/* Style the checkmark/indicator */
-.container .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
+input[type="checkbox"].switch_4{
+	font-size: 20px;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+	width: 3.5em;
+	height: 1.5em;
+	background: #ddd;
+	border-radius: 3em;
+	position: relative;
+	cursor: pointer;
+	outline: none;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	margin-left: -10px;
+  }
+  
+  input[type="checkbox"].switch_4:checked{
+	background: #0ebeff;
+  }
+  
+  input[type="checkbox"].switch_4:after{
+	position: absolute;
+	content: "";
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 50%;
+	background: #fff;
+	-webkit-box-shadow: 0 0 .25em rgba(0,0,0,.3);
+	        box-shadow: 0 0 .25em rgba(0,0,0,.3);
+	-webkit-transform: scale(.7);
+	        transform: scale(.7);
+	left: 0;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+  }
+  
+  input[type="checkbox"].switch_4:checked:after{
+	left: calc(100% - 1.5em);
+  }
+	
+/* Switch 4 Specific Style End */
+
+/* Switch 5 Specific Styles Start */
+
+input[type="checkbox"].switch_5{
+	font-size: 20px;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+	width: 3.5em;
+	height: 1.5em;
+	background: #ddd;
+	border-radius: 3em;
+	position: relative;
+	cursor: pointer;
+	outline: none;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	margin-left: -50px;
+  }
+  
+  input[type="checkbox"].switch_5:checked{
+	background: #0ebeff;
+  }
+  
+  input[type="checkbox"].switch_5:after{
+	position: absolute;
+	content: "";
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 50%;
+	background: #fff;
+	-webkit-box-shadow: 0 0 .25em rgba(0,0,0,.3);
+	        box-shadow: 0 0 .25em rgba(0,0,0,.3);
+	-webkit-transform: scale(.7);
+	        transform: scale(.7);
+	left: 0;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+  }
+  
+  input[type="checkbox"].switch_5:checked:after{
+	left: calc(100% - 1.5em);
+  }
+	
+/* Switch 5 Specific Style End */
+
+/* Switch 6 Specific Styles Start */
+
+input[type="checkbox"].switch_6{
+	font-size: 20px;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+	width: 3.5em;
+	height: 1.5em;
+	background: #ddd;
+	border-radius: 3em;
+	position: relative;
+	cursor: pointer;
+	outline: none;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	margin-left: -10px;
+  }
+  
+  input[type="checkbox"].switch_6:checked{
+	background: #0ebeff;
+  }
+  
+  input[type="checkbox"].switch_6:after{
+	position: absolute;
+	content: "";
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 50%;
+	background: #fff;
+	-webkit-box-shadow: 0 0 .25em rgba(0,0,0,.3);
+	        box-shadow: 0 0 .25em rgba(0,0,0,.3);
+	-webkit-transform: scale(.7);
+	        transform: scale(.7);
+	left: 0;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+  }
+  
+  input[type="checkbox"].switch_6:checked:after{
+	left: calc(100% - 1.5em);
+  }
+	
+/* Switch 6 Specific Style End */
+
+/* Switch 7 Specific Styles Start */
+
+input[type="checkbox"].switch_7{
+	font-size: 20px;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+	width: 3.5em;
+	height: 1.5em;
+	background: #ddd;
+	border-radius: 3em;
+	position: relative;
+	cursor: pointer;
+	outline: none;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	margin-left: -5px;
+  }
+  
+  input[type="checkbox"].switch_7:checked{
+	background: #0ebeff;
+  }
+  
+  input[type="checkbox"].switch_7:after{
+	position: absolute;
+	content: "";
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 50%;
+	background: #fff;
+	-webkit-box-shadow: 0 0 .25em rgba(0,0,0,.3);
+	        box-shadow: 0 0 .25em rgba(0,0,0,.3);
+	-webkit-transform: scale(.7);
+	        transform: scale(.7);
+	left: 0;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+  }
+  
+  input[type="checkbox"].switch_7:checked:after{
+	left: calc(100% - 1.5em);
+  }
+	
+/* Switch 7 Specific Style End */
+
+/* Switch 8 Specific Styles Start */
+
+input[type="checkbox"].switch_8{
+	font-size: 20px;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+	width: 3.5em;
+	height: 1.5em;
+	background: #ddd;
+	border-radius: 3em;
+	position: relative;
+	cursor: pointer;
+	outline: none;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	margin-left: -35px;
+  }
+  
+  input[type="checkbox"].switch_8:checked{
+	background: #0ebeff;
+  }
+  
+  input[type="checkbox"].switch_8:after{
+	position: absolute;
+	content: "";
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 50%;
+	background: #fff;
+	-webkit-box-shadow: 0 0 .25em rgba(0,0,0,.3);
+	        box-shadow: 0 0 .25em rgba(0,0,0,.3);
+	-webkit-transform: scale(.7);
+	        transform: scale(.7);
+	left: 0;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+  }
+  
+  input[type="checkbox"].switch_8:checked:after{
+	left: calc(100% - 1.5em);
+  }
+	
+/* Switch 8 Specific Style End */
+
+
 
 .button {
-    background-color: #4CAF50;
-    border: none;
+	background-color: #4CAF50;
+    width: 150px;
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: block;
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
     font-family: 'Open Sans', sans-serif;
+    border-radius: 25px;
+    margin-left: 240px;
 }
 
-
-
-.content-wrapper-assess .quiz #right-list {
-	background-color: #fff;
-	width: 350px;
+.quiz-left {
+	float: left;
+	background-color: rgba(0,0,0,0);
+	width: 250px;
 	height: 400px;
-	float: right;
-	padding-top: 20px;
+	margin-left: 130px;
 }
 
-.content-wrapper-assess .quiz #right-list li {
-	font-size: 20px;
-	font-family: 'Open Sans', sans-serif;
-	color: #888888;
-	list-style-type: none;
-	padding-bottom: 20px;
-	text-align: left;
-	padding-left: 120px;
+.quiz-right {
+	display: inline-block;
+	width: 250px;
+	height: 400px;
+	background-color: rgba(0,0,0,0);
 }
+
+.assetQuiz .button {
+    background-color: #4CAF50;
+    width: 150px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 25px;
+    margin-left: 640px;
+}
+
+/* END QUIZBOX CSS */
+
+
+/* ASSET RESULTS */
+.assetResults {
+	display: none;
+}
+
+.resultsContainer {
+	width: 100%;
+	height: 55%;
+	background-color: #42AAEB;
+	padding-top: 100px;
+	margin: 0 auto;
+}
+
+.resultsContainer h1 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 60px;
+	font-weight: lighter;
+	color: #fff;
+	text-align: center;
+}
+
+.results {
+	width: 700px;
+	height: 350px;
+	background-color: #ffffff;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: lighter;
+	margin: 0 auto;
+	padding-top: 30px;
+	padding-left: 20px;
+	padding-right: 10px;
+	-webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
+    overflow: scroll;
+}
+
+.results h2 {
+	text-align: center;
+	font-size: 30px;
+	font-weight: normal;
+}
+
+.results h3 {
+	font-size: 25px;
+	font-weight: normal;
+	font-style: italic;
+	color: #42AAEB;
+}
+
+/* END ASSET RESULTS */
 
 /* Font Awesome Chevron Icon */
 
@@ -896,7 +1257,6 @@ button .fa.fa-chevron-circle-down.fa-5x {
 	background-position: center;
 	background-size: cover;*/
 	text-align: center;
-	padding-top: 100px;
 	position: relative;
 }
 
@@ -925,19 +1285,19 @@ button .fa.fa-chevron-circle-down.fa-5x {
 	height: 100%;
 	top: 0;
 	left: 0;
+	margin: 0 auto;
+	padding-top: 100px;
 }
 
-#assessmentSection .assetResult {
+#assessmentSection .assetQuiz {
 	position: absolute;
-	background-color: red;
+	background-color: #fff;
 	width: 100%;
 	height: 100%;
 	top: 0;
 	left: 0;
 	display: none;
 }
-
-
 
 #beginText {
 	width: 500px;
@@ -1042,6 +1402,7 @@ button .fa.fa-chevron-circle-down.fa-5x {
 	color: #42AAEB;
 	cursor: pointer;
 }
+
 
 
 /* CONTACT PAGE */
